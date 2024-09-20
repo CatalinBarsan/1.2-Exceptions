@@ -1,4 +1,4 @@
-package nivel01.ejercicio01.test;
+/*package nivel01.ejercicio01.test;
 
 import nivel01.ejercicio01.main.java.com.modules.products.Product;
 import nivel01.ejercicio01.main.java.com.modules.products.ProductManager;
@@ -16,13 +16,13 @@ public class Manager {
         return products;
     }
 
- /*   public static void main(String[] args) throws SaleBuidaException {
+ *//*   public static void main(String[] args) throws SaleBuidaException {
         ProductManager productManager = new ProductManager();
         List<Product> products = productManager.getProducts();
         Sale sale = new Sale(products);
         sale.getTotalPrice();
 
-    }*/
+    }*//*
 
 
-}
+}*/
