@@ -96,7 +96,6 @@ public class InControl {
         return reed;
     }
 
-
     public static String stringRead(String message) throws InValueError{
         out.println(message);
         String value = sc.nextLine();
@@ -108,6 +107,24 @@ public class InControl {
 
     }
 
-
+    public static Boolean booleanRead(String message) throws InValueError{
+        out.println(message);
+        String validate = sc.nextLine();
+        boolean control=true;
+        boolean valueBoolean = false;
+        while(control){
+            if (validate.equalsIgnoreCase("s")){
+                valueBoolean = true;
+                control=false;
+            } else if (validate.equalsIgnoreCase("n")){
+                valueBoolean = false;
+                control=false;
+            } else {
+                throw new InValueError("Inser only s or n character.");
+            }
+        }
+        System.out.println("Your inserted value is: " + valueBoolean);
+        return valueBoolean;
+    }
 
 }

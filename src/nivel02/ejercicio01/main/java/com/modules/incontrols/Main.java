@@ -1,8 +1,5 @@
-package nivel02.ejercicio01.test;
+package nivel02.ejercicio01.main.java.com.modules.incontrols;
 
-import nivel02.ejercicio01.main.java.com.modules.incontrols.*;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -43,6 +40,11 @@ public class Main {
                     ic.stringRead("Insert a String value:");
                     continue;
                 case "7":
+                    try {
+                        ic.booleanRead("Insert s for true or n for false value:");
+                    } catch(InValueError e){
+                        System.out.println(e.getMessage());
+                    }
                     continue;
                 case "0":
                     System.out.println("Goodbye");
