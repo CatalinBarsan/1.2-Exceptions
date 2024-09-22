@@ -7,7 +7,7 @@ import static java.lang.System.*;
 
 public class InControl {
 
-    static Scanner sc = new Scanner(in);
+    private static Scanner sc = new Scanner(in);
 
     public static byte byteRead(String message){
        byte reed = 0;
@@ -96,15 +96,15 @@ public class InControl {
         return reed;
     }
 
+
     public static String stringRead(String message) throws InValueError{
         out.println(message);
-        String reed = "";
         String value = sc.nextLine();
         if(value.isEmpty()){
             throw new InValueError("Insert a string value.");
         }
         out.println("Your inserted value is: " + value);
-        return reed;
+        return value;
 
     }
 
