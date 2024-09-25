@@ -1,18 +1,15 @@
 package nivel03.ejercicio01.main.java.com.modules.seat;
 
-import javax.sound.sampled.Line;
-
 
 public class Seat {
-
     private int rowNumber;
     private int seatNumber;
-    private String personReservingSeat;
+    private String reservedBy;
 
-    public Seat(int rowNumber, int seatNumber, String personReservingSeat) {
+    public Seat(int rowNumber, int seatNumber, String reservedBy) {
         this.rowNumber = rowNumber;
         this.seatNumber = seatNumber;
-        this.personReservingSeat = personReservingSeat;
+        this.reservedBy = reservedBy;
     }
 
     public int getRowNumber() {
@@ -23,22 +20,21 @@ public class Seat {
         return seatNumber;
     }
 
-    public String getPersonReservingSeat() {
-        return personReservingSeat;
+    public String getReservedBy() {
+        return reservedBy;
     }
 
-    public boolean Equals(Object newSeat) {
-        if (this == newSeat) {
-            return true;
-        }
-        if (newSeat == null || getClass() != newSeat.getClass()) {
-            return false;
-        }
-        Seat otherSeat = (Seat) newSeat;
-        return rowNumber == otherSeat.rowNumber && seatNumber == otherSeat.seatNumber;
-    }
-    public String ToString() {
-        return "Row: " + rowNumber + ", Seat: " + seatNumber + ", Person: " + personReservingSeat + ".";
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Seat seat = (Seat) obj;
+        return rowNumber == seat.rowNumber && seatNumber == seat.seatNumber;
     }
 
+    @Override
+    public String toString() {
+        return "Row: " + rowNumber + ", Seat: " + seatNumber + ", Reserved by: " + reservedBy;
+    }
 }
+
