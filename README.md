@@ -50,7 +50,7 @@ Para ejecutar este proyecto, es necesario tener instalado lo siguiente:
 
 1. Clona el repositorio en tu máquina local utilizando Git:
    ```bash
-   git clone https://github.com/usuario/proyecto-ventas-cine.git
+   git clone https://github.com/CatalinBarsan/1.2-Exceptions.git
    ```
 2. Abre el proyecto en **IntelliJ IDEA** o **Eclipse**.
 3. Si estás usando **Maven**, asegúrate de que las dependencias se descarguen correctamente:
